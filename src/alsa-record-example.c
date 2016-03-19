@@ -78,7 +78,7 @@ main (int argc, char *argv[])
 	
   fprintf(stdout, "hw_params rate setted\n");
 
-  if ((err = snd_pcm_hw_params_set_channels (capture_handle, hw_params, 2)) < 0) {
+  if ((err = snd_pcm_hw_params_set_channels (capture_handle, hw_params, 1)) < 0) {
     fprintf (stderr, "cannot set channel count (%s)\n",
              snd_strerror (err));
     exit (1);
