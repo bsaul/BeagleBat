@@ -11,7 +11,7 @@ all: beaglebat
 #	$(CC) -c -o $@ $< $(CFLAGS)
 
 beaglebat: alsa-record-example.c
-	$(CC) -o src/alsa-record-example.c beaglebat
+	$(CC) -o src/alsa-record-example.c -lasound bin/beaglebat
 
 clean:
-    rm *o beaglebat
+	rm *o beaglebat
