@@ -10,7 +10,7 @@ all: beaglebat
 #%.o: %.c $(DEPS)
 #	$(CC) -c -o $@ $< $(CFLAGS)
 
-beaglebat: alsa-record-example.c
+beaglebat: alsa-record-example.o
 	$(CC) -o src/alsa-record-example.c -lasound bin/beaglebat
 
 clean:
