@@ -9,8 +9,7 @@
 int main(int argc, char **argv)
 {
     config_t cfg, *cf;
-    const config_setting_t;
-    int rate
+    int rate;
     int enabled;
 
     cf = &cfg;
