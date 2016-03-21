@@ -33,9 +33,6 @@ int main(int argc, char **argv)
     if (config_lookup_string(cf, "hardware.rate", &base))
         printf("Host: %s\n", base);
 
-    retries = config_lookup(cf, "ldap.retries");
-    count = config_setting_length(retries);
-
     config_destroy(cf);
     return 0;
 }
