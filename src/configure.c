@@ -45,7 +45,7 @@ int main(int argc, char **argv)
     }
 */
 
-    if (config_lookup_int(cf, "hardware.rate", &rate))
+    if (config_lookup_int64(cf, "hardware.rate", &rate))
         printf("Sampling rate: %s\n", rate);
     else
     	printf("Sampling rate not defined");
