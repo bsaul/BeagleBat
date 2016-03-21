@@ -10,7 +10,7 @@ int main(int argc, char **argv)
 {
     config_t cfg, *cf;
     config_setting_t *hardware_config;
-    int rate;
+    long long int rate;
     int enabled;
 
     cf = &cfg;
