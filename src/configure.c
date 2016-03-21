@@ -9,7 +9,7 @@
 int main(int argc, char **argv)
 {
     config_t cfg, *cf;
-    config_setting_t *setting;
+    config_setting_t *hardware_config;
     int rate;
     int enabled;
 
@@ -30,11 +30,26 @@ int main(int argc, char **argv)
     else 
         printf("Enabled is not defined\n");
 
+    hardware_config = config_lookup(&cfg, "hardware");
+
+    if(hardware_config != NULL)
+    {
+    	printf("this worked!");
+    	if(config_setting_lookup_int(hardware_config, "rate", &rate))
+    		        printf("Sampling rate: %s\n", rate);
+    	else
+    		printf("Sampling rate not defined");
+    } else {
+    	printf("Well I tried");
+    }
+
+
+/*
     if (config_lookup_int(cf, "hardware.rate", &rate))
         printf("Sampling rate: %s\n", rate);
     else
     	printf("Sampling rate not defined");
-
+*/
     config_destroy(cf);
     return 0;
 }
