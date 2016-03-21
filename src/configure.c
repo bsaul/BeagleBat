@@ -30,26 +30,26 @@ int main(int argc, char **argv)
     else 
         printf("Enabled is not defined\n");
 
+/*
     hardware_config = config_lookup(&cfg, "hardware");
 
     if(hardware_config != NULL)
     {
     	printf("this worked!");
-    	if(config_setting_lookup_int(hardware_config, "rate", &rate))
+    	if(config_setting_lookup_int64(hardware_config, "rate", &rate))
     		        printf("Sampling rate: %s\n", rate);
     	else
     		printf("Sampling rate not defined");
     } else {
     	printf("Well I tried");
     }
+*/
 
-
-/*
     if (config_lookup_int(cf, "hardware.rate", &rate))
         printf("Sampling rate: %s\n", rate);
     else
     	printf("Sampling rate not defined");
-*/
+
     config_destroy(cf);
     return 0;
 }
