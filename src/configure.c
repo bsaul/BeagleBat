@@ -9,8 +9,9 @@
 int main(int argc, char **argv)
 {
     config_t cfg, *cf;
-    const config_setting_t *retries;
-    int rate, enabled;
+    const config_setting_t;
+    int rate
+    int enabled;
 
     cf = &cfg;
     config_init(cf);
@@ -29,7 +30,7 @@ int main(int argc, char **argv)
     else 
         printf("Enabled is not defined\n");
 
-    if (config_lookup_int(cf, "hardware.rate", &rate))
+    if (config_setting_lookup_int(cf, "hardware.rate", &rate))
         printf("Sampling rate: %s\n", rate);
 
     config_destroy(cf);
