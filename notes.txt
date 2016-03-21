@@ -1,0 +1,1 @@
+# sudo apt-get install libconfig++9 libasound2-dev
