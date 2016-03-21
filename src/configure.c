@@ -10,8 +10,7 @@ int main(int argc, char **argv)
 {
     config_t cfg, *cf;
     const config_setting_t *retries;
-    const int *rate = NULL;
-    int count, n, enabled;
+    int rate, enabled;
 
     cf = &cfg;
     config_init(cf);
