@@ -16,7 +16,7 @@ int main(int argc, char **argv)
     cf = &cfg;
     config_init(cf);
 
-    if (!config_read_file(cf, "../beaglebat.cfg")) {
+    if (!config_read_file(cf, "beaglebat.cfg")) {
         fprintf(stderr, "%s:%d - %s\n",
             config_error_file(cf),
             config_error_line(cf),
