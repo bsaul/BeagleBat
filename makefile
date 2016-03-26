@@ -12,7 +12,7 @@ IDIR = ../include
 #	$(CC) -o bin/beaglebat -lasound src/alsa-record-example.c $(CFLAGS) 
 
 beaglebat: src/configure.c
-	$(CC) -o bin/beaglebat -lconfig src/configure.c $(CFLAGS) 
+	$(CC) -o bin/beaglebat -lconfig -lasound src/configure.c src/beaglebat.c src/record.c $(CFLAGS) 
 
 clean:
 	rm *o beaglebat

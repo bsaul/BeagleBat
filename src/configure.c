@@ -1,16 +1,17 @@
-/*
-
-*/
+/**
+ *
+ */
 
 #include <stdio.h>
 #include <stdlib.h>
 #include <libconfig.h>
 
-int main(int argc, char **argv)
+unsigned int configureBeaglebat()
 {
     config_t cfg, *cf;
     config_setting_t *hardware_config;
-    long long int rate;
+    long long int llrate;
+    unsigned int rate;
     int enabled;
 
     cf = &cfg;
@@ -30,11 +31,15 @@ int main(int argc, char **argv)
     else 
         printf("Enabled is not defined\n");
 
-    if (config_lookup_int64(cf, "hardware.rate", &rate))
-        printf("Sampling rate: %lli\n", rate);
+    if (config_lookup_int64(cf, "hardware.rate", &llrate))
+        printf("Sampling rate: %lli\n", llrate);
     else
     	printf("Sampling rate not defined");
 
     config_destroy(cf);
-    return 0;
+
+    rate = (unsigned int) llrate;
+
+    return(rate);
+    //exit(0);
 }
