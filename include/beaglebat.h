@@ -9,6 +9,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <libconfig.h>
+#include <alsa/asoundlib.h>
 #include <time.h>
 
 typedef struct

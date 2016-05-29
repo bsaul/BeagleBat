@@ -12,6 +12,7 @@ int main(int argc, char *argv)
     if(configureBeaglebat() == EXIT_FAILURE)
         return 0;
 
-	//record(rate);
+	record(bbconfig->sampling_rate);
+    
 	return(1);
 }

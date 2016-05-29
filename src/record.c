@@ -14,9 +14,8 @@
   gcc -o alsa-record-example -lasound alsa-record-example.c && ./alsa-record-example hw:0
 */
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <alsa/asoundlib.h>
+#include <include/beaglebat.h>
+
 	      
 int record (unsigned int rate)
 {
