@@ -12,13 +12,6 @@ int main(int argc, char *argv)
     if(configureBeaglebat() == EXIT_FAILURE)
         return 0;
 
-    printf("Enabled 2: %s\n", bbconfig->enabled ? "Yep" : "Nope");
-
-    printf("Project ID: %c\n", bbconfig->project_id);
-
-	//rate = ;
-	//printf("%u\n", rate);
-
 	//record(rate);
-	return(0);
+	return(1);
 }

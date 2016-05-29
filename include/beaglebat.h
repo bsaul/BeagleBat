@@ -14,7 +14,8 @@ typedef struct
 {
     int buffer_size;
     int enabled;
-    unsigned int rate;
+    long long srate;
+    unsigned int sampling_rate;
     const char * project_id;
 }bbconf;
 
@@ -22,6 +23,5 @@ bbconf *bbconfig;
 
 int configureBeaglebat();
 
-// unsigned int configureBeaglebat();
 // int record(unsigned int rate);
 

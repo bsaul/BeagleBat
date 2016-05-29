@@ -5,6 +5,10 @@
 Then:
 // sudo apt-get install libconfig-dev libasound2-dev 
 
+# Login to beaglebone
+
+
+
 ## Moving files
 
 
@@ -16,4 +20,5 @@ make beaglebat
 mkdir bin (if not already there)
 
 ## Run program
-./beaglebat
+./beaglebat or ./bin/beaglebat
+
