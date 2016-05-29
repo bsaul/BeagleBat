@@ -1,3 +1,0 @@
-# TODO
-
-Try this? http://stackoverflow.com/questions/16970288/creating-a-global-struct-for-multiple-source-files
