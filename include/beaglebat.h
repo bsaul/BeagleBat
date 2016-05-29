@@ -9,14 +9,15 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <libconfig.h>
+#include <time.h>
 
 typedef struct
 {
     int buffer_size;
     int enabled;
-    long long srate;
     unsigned int sampling_rate;
     const char * project_id;
+    const char * deployment_type;
 }bbconf;
 
 bbconf *bbconfig;

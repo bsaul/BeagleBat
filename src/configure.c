@@ -9,7 +9,6 @@ int configureBeaglebat()
     config_t cfg, *cf;
     config_setting_t * hardware_config;
     long long llrate;
-//    unsigned int srate;
 
     cf = &cfg;
     config_init(cf);
@@ -23,28 +22,25 @@ int configureBeaglebat()
         return(EXIT_FAILURE);
     }
 
-    if (config_lookup_bool(cf, "enabled", &bbconfig->enabled))
-        printf("Enabled: %s\n", bbconfig->enabled ? "Yep" : "Nope");
-    else 
-        printf("Enabled is not defined\n");
-
+    printf("Project ID: ");
     if (config_lookup_string(cf, "deployment.project_id", &bbconfig->project_id))
-        printf("Project ID set\n");
+        printf("%s\n", bbconfig->project_id);
     else
-        printf("no Project ID\n");
+        printf("not defined \n");
 
+    printf("Deployment type: ");
+    if (config_lookup_string(cf, "deployment.type", &bbconfig->deployment_type))
+        printf("%s\n", bbconfig->deployment_type);
+    else
+        printf("not defined \n");
 
-    if (config_lookup_int64(cf, "hardware.sampling_rate", &bbconfig->srate)){
-        printf("Sampling rate: %lli\n", &bbconfig->srate);
- //       srate = (unsigned int) llrate;
- //       printf("%u\n", srate);
-        // not sure why this isn't working...
-//        &bbconfig->sampling_rate = (unsigned int) llrate;
-//        bbconf.sampling_rate = srate;
+    printf("Sampling rate: ");
+    if (config_lookup_int64(cf, "hardware.sampling_rate", &llrate)){
+        bbconfig->sampling_rate = (unsigned int) llrate;
+        printf("%u\n", bbconfig->sampling_rate);
     }
     else
-      	printf("Sampling rate not defined");
-
+      	printf("not defined \n");
 
 
     config_destroy(cf);
