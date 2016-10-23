@@ -107,7 +107,7 @@ int record (unsigned int rate)
 
   fprintf(stdout, "audio interface prepared\n");
 
-  buffer = malloc(128 * snd_pcm_format_width(format) / 8 * 2);
+  buffer = malloc(buffer_frames * snd_pcm_format_width(format) / 8 * 2);
 
   fprintf(stdout, "buffer allocated\n");
 
@@ -120,6 +120,28 @@ int record (unsigned int rate)
     fprintf(stdout, "read %d done\n", i);
   }
 
+
+  /* Write to file */ 
+  
+  /*SF_INFO sfinfo =
+  {
+      .channels = data->numberOfChannels,
+      .samplerate = data->sampleRate,
+     .format = SF_FORMAT_FLAC | SF_FORMAT_PCM_16
+  };
+  SNDFILE *outfile = sf_open('test.wav', SFM_WRITE, &sfinfo);
+  if (!outfile) return -1;
+
+  // Write the entire buffer to the file
+    long wr = sf_writef_float(outfile, data->recordedSamples, data->size / sizeof(float));
+    err = data->size - wr;
+
+    // Force write to disk and close file
+    sf_write_sync(outfile);
+    sf_close(outfile);
+    puts("Wrote to file!!!!");
+  */
+  
   free(buffer);
 
   fprintf(stdout, "buffer freed\n");

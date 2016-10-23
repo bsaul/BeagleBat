@@ -6,12 +6,10 @@ Then:
 // sudo apt-get install libconfig-dev libasound2-dev 
 
 # Login to beaglebone
-
+see evernote file
 
 
 ## Moving files
-
-
 rsync -a ~/Dropbox/Research/software/beaglebat/ bradley@192.168.0.11:/home/bradley/beaglebat
 
 ## Compiling
@@ -24,3 +22,8 @@ mkdir bin (if not already there)
 
 ## Try this?
 http://stackoverflow.com/questions/16970288/creating-a-global-struct-for-multiple-source-files
+
+
+## Next steps
+* open audio stream; read into buffer; FFT; print max freq;
+  * this may be helpful: http://www.nairobi-embedded.org/alsa_daq_and_rt_fft.html

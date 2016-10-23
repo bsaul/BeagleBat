@@ -9,6 +9,7 @@ int configureBeaglebat()
     config_t cfg, *cf;
     config_setting_t * hardware_config;
     long long llrate;
+    const char * storage_dir;
 
     cf = &cfg;
     config_init(cf);
@@ -41,7 +42,14 @@ int configureBeaglebat()
     }
     else
       	printf("not defined \n");
-
+    
+    printf("Storage location: ");
+    if (config_lookup_string(cf, "hardware.storage_directory", &storage_dir)){
+        strcpy(bbconfig->storage_dir, storage_dir);
+        printf("%s\n", bbconfig->storage_dir);
+    }
+    else
+        printf("not defined \n");
 
     config_destroy(cf);
 
