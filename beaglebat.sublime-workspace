@@ -3,6 +3,18 @@
 	{
 		"selected_items":
 		[
+			[
+				"bbcon",
+				"bbconfig"
+			],
+			[
+				"dep",
+				"deployment_type"
+			],
+			[
+				"de",
+				"deployment"
+			]
 		]
 	},
 	"buffers":
@@ -38,8 +50,22 @@
 		"side_bar_visible": false,
 		"status_bar_visible": false
 	},
+	"expanded_folders":
+	[
+		"/Users/bradley/Dropbox/Research/software/beaglebat",
+		"/Users/bradley/Dropbox/Research/software/beaglebat/include",
+		"/Users/bradley/Dropbox/Research/software/beaglebat/src"
+	],
 	"file_history":
 	[
+		"/Users/bradley/Dropbox/Research/software/beaglebat/notes.txt",
+		"/Users/bradley/Dropbox/Research/software/beaglebat/include/beaglebat.h",
+		"/Users/bradley/Dropbox/Research/software/beaglebat/src/configure.c",
+		"/Users/bradley/Dropbox/Research/software/beaglebat/src/beaglebat.c",
+		"/Users/bradley/Dropbox/Research/software/beaglebat/src/record.c",
+		"/Users/bradley/Dropbox/Research/software/beaglebat/beaglebat.cfg",
+		"/Users/bradley/Dropbox/Research/software/beaglebat/todo.txt",
+		"/Users/bradley/Dropbox/Research/software/beaglebat/include/todo.txt"
 	],
 	"find":
 	{
@@ -156,7 +182,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 150.0,
+	"side_bar_width": 221.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

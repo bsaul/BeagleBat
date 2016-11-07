@@ -1,9 +1,16 @@
 # Setting up beaglebone
 
+// set root password
+passwd
+// add user
+adduser <username>
+// add user to sudo group?
+adduser <username> sudo
 
-// sudo apt-get update
-Then:
-// sudo apt-get install libconfig-dev libasound2-dev 
+// Update Debian
+sudo apt-get update
+// Install packages necessary for beaglebat
+sudo apt-get install libconfig-dev libasound2-dev 
 
 # Login to beaglebone
 see evernote file
@@ -11,6 +18,7 @@ see evernote file
 
 ## Moving files
 rsync -a ~/Dropbox/Research/software/beaglebat/ bradley@192.168.0.11:/home/bradley/beaglebat
+rsync -a ~/Dropbox/Research/software/beaglebat/ bradley@192.168.1.72:/home/bradley/beaglebat
 
 ## Compiling
 make beaglebat
@@ -19,6 +27,8 @@ mkdir bin (if not already there)
 
 ## Run program
 ./beaglebat or ./bin/beaglebat
+
+## Setting up SD card
 
 ## Try this?
 http://stackoverflow.com/questions/16970288/creating-a-global-struct-for-multiple-source-files
